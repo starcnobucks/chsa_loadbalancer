@@ -1,0 +1,28 @@
+# CHCA Load Balancer Configuration
+server:
+  port: 9090
+
+backends:
+  - url: "http://localhost:8001"
+    weight: 1
+  - url: "http://localhost:8002"
+    weight: 1
+  - url: "http://localhost:8003"
+    weight: 1
+
+ring:
+  virtual_nodes: 150
+
+congestion:
+  max_connections: 100
+  max_gpu_utilization: 90.0
+  max_cpu_utilization: 80.0
+  monitor_interval_seconds: 5
+
+health:
+  check_interval_seconds: 5
+  timeout_seconds: 2
+  endpoint: "/health"
+
+logging:
+  level: "info"
