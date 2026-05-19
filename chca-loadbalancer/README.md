@@ -1,6 +1,6 @@
 # CHCA Load Balancer
 
-A **Congestion-Aware Consistent Hashing** load balancer built in Go. Requests with the same session key are consistently routed to the same backend. When a backend becomes overloaded, it is automatically skipped and the next healthy server on the hash ring is selected.
+A **Congestion-Aware Consistent Hashing** load balancer built in Go. Requests with the same session key are consistently routed to the same backend. When a backend becomes overloaded, it is automatically skipped and the next healthy server on the hash ring is selected..
 
 ## Features
 
